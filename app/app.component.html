@@ -1,0 +1,14 @@
+<div #main>
+  <div>{{title}}</div>
+  <div #board id="board">
+    <ng-container *ngFor="let column of fields;index as x">
+      <div [ngClass]="'row'">
+        <ng-container *ngFor="let field of column;index as y;">
+          <div [ngClass]="'field'" [innerText]="fields[x][y]" (onclick)="onFieldClicked(x, y)">
+
+          </div>
+        </ng-container>
+      </div>
+    </ng-container>
+  </div>
+</div>

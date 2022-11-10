@@ -1,0 +1,23 @@
+:host {
+    --field-height: 40px;
+    --field-width: 40px;
+    --field-margin: 2px
+}
+
+.row {
+    display: block;
+    height: calc(var(--field-height) + var(--field-margin) * 2);
+    width: calc(var(--field-width) * 3 + var(--field-margin) * 6);
+}
+
+.field {
+    display: inline-block;
+    height: var(--field-height);
+    width: var(--field-width);
+    margin: var(--field-margin);
+
+    background-color: grey;
+    text-align: center;
+    line-height: var(--field-height);
+    vertical-align: middle;
+}
