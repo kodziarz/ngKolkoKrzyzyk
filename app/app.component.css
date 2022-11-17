@@ -16,8 +16,22 @@
     width: var(--field-width);
     margin: var(--field-margin);
 
-    background-color: grey;
+    background-color: palevioletred;
     text-align: center;
     line-height: var(--field-height);
     vertical-align: middle;
+}
+
+.field.empty {
+    background-image: none;
+}
+
+.field.crossed {
+    background-image: url("../assets/cross.ico");
+    background-size: cover;
+}
+
+.field.circled {
+    background-image: url("../assets/circle.png");
+    background-size: cover;
 }

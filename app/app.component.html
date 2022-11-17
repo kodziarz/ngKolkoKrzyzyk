@@ -1,10 +1,10 @@
 <div #main>
   <div>{{title}}</div>
   <div #board id="board">
-    <ng-container *ngFor="let column of fields;index as x">
+    <ng-container *ngFor="let column of cssClasses;index as x">
       <div [ngClass]="'row'">
-        <ng-container *ngFor="let field of column;index as y;">
-          <div [ngClass]="'field'" [innerText]="fields[x][y]" (onclick)="onFieldClicked(x, y)">
+        <ng-container *ngFor="let class of column;index as y">
+          <div [ngClass]="cssClasses[x][y]" (click)="onFieldClicked(x, y)">
 
           </div>
         </ng-container>
