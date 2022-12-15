@@ -1,11 +1,14 @@
 <div #main>
   <div>{{title}}</div>
-  <div #board id="board">
+  <div #whoseTurnDiv id="whoseTurnDiv">{{whoseTurn}}</div>
+  <div id="board">
     <ng-container *ngFor="let column of cssClasses;index as x">
       <div [ngClass]="'row'">
         <ng-container *ngFor="let class of column;index as y">
-          <div [ngClass]="cssClasses[x][y]" (click)="onFieldClicked(x, y)">
+          <div [ngClass]="cssClasses[x][y]" (click)="whoseTurnDiv.innerText='ruch komputera'">
+            <div [ngClass]="cssClasses[x][y]" (click)="onFieldClicked(x, y)">
 
+            </div>
           </div>
         </ng-container>
       </div>
